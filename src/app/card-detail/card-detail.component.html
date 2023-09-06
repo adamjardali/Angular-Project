@@ -1,0 +1,18 @@
+<!-- card-detail.component.html -->
+<div class="card-detail-container">
+  <header>
+    <h1>Card Detail Page</h1>
+  </header>
+
+  <div class="card-details">
+    <div *ngIf="card">
+      <img [src]="card.avatar" alt="User Avatar">
+      <h3>{{ card.first_name }} {{ card.last_name }}</h3>
+      <p>ID: {{ card.id }}</p>
+      <!-- Display additional card details as needed -->
+
+      <!-- Back button to navigate to the user list -->
+      <button (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>

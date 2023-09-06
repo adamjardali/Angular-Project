@@ -1,0 +1,40 @@
+/* user-list.component.css */
+.user-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.user-list {
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pagination styles (you may need to add more depending on your pagination implementation) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Add pagination component styles here (if using Angular Material or custom) */

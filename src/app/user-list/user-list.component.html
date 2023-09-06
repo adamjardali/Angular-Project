@@ -1,0 +1,26 @@
+<!-- user-list.component.html -->
+<div class="user-list-container">
+  <header>
+    <h1>User List Page</h1>
+    <!-- Add an instant search input field -->
+    <input [(ngModel)]="searchTerm" (input)="searchUsers()" placeholder="Search by ID...">
+  </header>
+
+  <div class="user-list">
+    <ul>
+      <!-- Use *ngFor to iterate through the users and make the whole card clickable -->
+      <li *ngFor="let user of filteredUsers" class="user-card">
+        <!-- Wrap the image within an anchor and use routerLink to navigate to card-detail -->
+        <a [routerLink]="['/card-detail', user.id]">
+          <img [src]="user.avatar" alt="User Avatar">
+        </a>
+        <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+        <p>ID: {{ user.id }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pagination">
+    <!-- Pagination component or code goes here (if using Angular Material or custom) -->
+  </div>
+</div>
